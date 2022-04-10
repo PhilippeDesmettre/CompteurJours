@@ -18,7 +18,7 @@
             <Label TextColor="Gold" FontSize="10" x:Name="years"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button  x:Name="saveIntervalButton"    ></Button>
+            <Button Text="Save"  x:Name="saveIntervalButton"    ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -2,8 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DayCounter.MainPage">
-
-    <StackLayout BackgroundColor="Gray">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sort by" x:Name="SortByClick"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout  BackgroundColor="Gray">
+        <Picker  x:Name="SortPickr" IsVisible="false">
+            
+        </Picker>
         <Button BackgroundColor="Gold" Text="Nouveau compteur" HeightRequest="40" WidthRequest="40" BorderRadius="20" Clicked="NewEntry" />
         <ListView x:Name="MyListView" ItemSelected="LV_ItemSelected">
             <ListView.ItemTemplate>

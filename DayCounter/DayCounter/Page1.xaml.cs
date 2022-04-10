@@ -23,7 +23,7 @@ namespace DayCounter
             {
                 await DisplayAlert("Attention", "Vous n'avez pas remplis les informations", "OK");
             }
-            if(DatePick.Date>DateTime.Now)
+            else if(DatePick.Date>DateTime.Now)
             {
                 await DisplayAlert("Attention", "Impossible de choisir une date superieur à la date d'aujourdhui", "OK");
             }
