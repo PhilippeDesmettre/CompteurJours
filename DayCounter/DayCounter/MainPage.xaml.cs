@@ -38,7 +38,7 @@ namespace DayCounter
 
             InitializeComponent();
             List<string> sortByList = new List<string>()
-            {"Trier par Titre","Trier par date" };
+            {"Trier par Titre","Trier Par Tire Desc","Trier par Date","Trier par Date Desc" };
             SortPickr.ItemsSource = sortByList;
 
 
@@ -56,7 +56,19 @@ namespace DayCounter
                       var list = intervals.OrderBy(a => a.Title).ToList();
                       MyListView.ItemsSource = list;
                   }
-                  if (SortPickr.SelectedItem.ToString() == "Trier par date")
+                  if (SortPickr.SelectedItem.ToString() == "Trier Par Tire Desc")
+                  {
+                      List<Interval> intervals = await App.Database.GetIntervalAsync();
+                      var list = intervals.OrderByDescending(a => a.Title).ToList();
+                      MyListView.ItemsSource = list;
+                  }
+                  if (SortPickr.SelectedItem.ToString() == "Trier par Date")
+                  {
+                      List<Interval> intervals = await App.Database.GetIntervalAsync();
+                      var list = intervals.OrderBy(a => a.StartDate).ToList();
+                      MyListView.ItemsSource = list;
+                  }
+                  if (SortPickr.SelectedItem.ToString() == "Trier par Date Desc")
                   {
                       List<Interval> intervals = await App.Database.GetIntervalAsync();
                       var list = intervals.OrderByDescending(a => a.StartDate).ToList();
