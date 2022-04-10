@@ -32,6 +32,10 @@ namespace DayCounter
             return _database.UpdateAsync(interval);
         }
 
+        public Task<int> DeleteIntervalAsync(Interval interval)
+        {
+            return _database.DeleteAsync(interval);
+        }
 
     }
 

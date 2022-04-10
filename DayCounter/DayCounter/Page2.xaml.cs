@@ -37,6 +37,13 @@ namespace DayCounter
                 await App.Database.ModifyIntervalAsync(interval);
                 await Navigation.PushAsync(new MainPage());
             };
+
+            deleteBtn.Clicked += async (o, a) =>
+            {
+
+                await App.Database.DeleteIntervalAsync(interval);
+                await Navigation.PushAsync(new MainPage());
+            };
         }
 
 
