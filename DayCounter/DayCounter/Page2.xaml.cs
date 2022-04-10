@@ -28,10 +28,7 @@ namespace DayCounter
             Months.Text = DAL.stringBuilder(month, "Mois"); 
             years.Text = DAL.stringBuilder(year, "Année");
 
-            //saveIntervalButton.BindingContext = interval;
-
-
-
+            
             saveIntervalButton.Clicked += async (o, a) =>
             {
 
