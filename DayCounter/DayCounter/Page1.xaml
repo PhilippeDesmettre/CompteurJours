@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DayCounter.Page1">
+    <ContentPage.Content>
+        
+        <StackLayout  BackgroundColor="Black">
+            <Label BackgroundColor="Gold"  Text="Créez votre Compteur"
+                   FontSize="30"
+                />
+            <Entry BackgroundColor="gold" Placeholder="Nom du compteur" x:Name="CounterName" ></Entry>
+            <Label BackgroundColor="Gold" Text="Date depart du compteur"></Label>
+            <DatePicker BackgroundColor="Gold" x:Name="DatePick"></DatePicker>
+            <Button Text="Créer Compteur" HeightRequest="40" WidthRequest="40" BorderRadius="20" Clicked="SaveEntry" BackgroundColor="Gold" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

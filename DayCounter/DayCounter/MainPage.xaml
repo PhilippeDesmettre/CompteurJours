@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DayCounter.MainPage">
+
+    <StackLayout BackgroundColor="Gray">
+        <Button BackgroundColor="Gold" Text="Nouveau compteur" HeightRequest="40" WidthRequest="40" BorderRadius="20" Clicked="NewEntry" />
+        <ListView x:Name="MyListView" ItemSelected="LV_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell  TextColor="Gold" DetailColor="Gold" Text="{Binding Title}" Detail="{Binding StartDate}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

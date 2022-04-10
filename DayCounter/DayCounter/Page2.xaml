@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DayCounter.Page2">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Gray">
+            <Entry FontSize="20" x:Name="titleInterval"></Entry>
+            <DatePicker FontSize="20"  x:Name="datePickerInterval"></DatePicker>
+            <Label TextColor="Gold" FontSize="10" x:Name="day" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label TextColor="Gold" FontSize="10" x:Name="Months" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label TextColor="Gold" FontSize="10" x:Name="years"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button  x:Name="saveIntervalButton"    ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
